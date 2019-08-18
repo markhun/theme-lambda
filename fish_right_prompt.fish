@@ -1,5 +1,4 @@
 function fish_right_prompt 
-	set -l exit_code $status
   __tmux_prompt
   if test $exit_code -ne 0
     set_color red
@@ -8,7 +7,9 @@ function fish_right_prompt
   end
   printf '%d' $exit_code
   set_color 666666
-  printf ' < %s' (date +%H:%M:%S)
+  printf ' < '
+  set_color yellow
+  printf '[%s]' (date +%H:%M:%S)
   set_color normal
 end
 
