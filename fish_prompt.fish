@@ -51,8 +51,8 @@ function fish_prompt
     set -g __fish_git_prompt_color_cleanstate green --bold
 
     # Line 1
-    echo -n $green'╭─'$green'['$normal$__fish_prompt_hostname$green']'$white' in '$green(pwd)$normal
-    __fish_git_prompt " [ %s ]"
+    echo -n $green'╭─'$green'['$normal$__fish_prompt_hostname$green']'$white' in '$green(prompt_pwd)$normal
+    __fish_git_prompt " [%s]"
     echo
 
     # Line 2
